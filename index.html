@@ -16,13 +16,6 @@
       font-size: 18px;
     }
   </style>
-  <script>
-    window.onload = function () {
-      setTimeout(function () {
-        document.getElementById('finalizar').style.display = 'inline-block';
-      }, 300000); // 5 minutos = 300.000 milissegundos
-    };
-  </script>
 </head>
 <body>
   <h1>Intervenção Psicocárdio</h1>
@@ -38,6 +31,14 @@
   <button id="finalizar" onclick="window.location.href='https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SHBYtXCgrUO2VCCjHpstmUUk_20om_1Phm-rNC8fTENUQjJLN0hOWTdZQVVCRVBFMFNFN0FVQlVYOC4u';">
     Finalizar Sessão
   </button>
+
+  <script>
+    // Garantir que o código só corre após a página estar carregada
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.getElementById('finalizar').style.display = 'inline-block';
+      }, 300000); // 300.000 ms = 5 minutos
+    });
+  </script>
 </body>
 </html>
-
