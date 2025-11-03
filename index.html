@@ -9,6 +9,13 @@
       text-align: center;
       padding: 50px;
     }
+
+    audio {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 600px;
+    }
+
     #finalizar {
       display: none;
       margin-top: 40px;
@@ -17,29 +24,36 @@
     }
   </style>
   <script>
-    // Mostrar botão "Finalizar" após 5 minutos (300.000 ms)
     window.onload = function() {
       setTimeout(function() {
         document.getElementById('finalizar').style.display = 'inline-block';
-      }, 300000);
+      }, 300000); // 5 minutos = 300000 ms
     }
   </script>
 </head>
 <body>
   <h1>Intervenção Psicocárdio</h1>
-  <p>Por favor, ouça o áudio abaixo com atenção. Após 5 minutos, poderá finalizar a sua participação.</p>
 
-  <!-- Áudio incorporado diretamente -->
+  <p>
+    Feche os olhos e concentre-se no som que vai ouvir.<br>
+    Inspire fundo. Quando ouvir um beep, comece a expirar.<br>
+    Quando voltar a ouvir um beep, volte a inspirar.<br>
+    Mantenha esta cadência até ao final da sessão,<br>
+    enquanto pensa em situações que lhe dão uma sensação de felicidade.<br>
+    No princípio poderá ter dificuldade, mas torna-se mais fácil com o treino.
+  </p>
+
+  <!-- Áudio diretamente na página -->
   <audio controls>
-    <source src="https://unedo365-my.sharepoint.com/:u:/g/personal/mt_m_aragoneses_edu_uned_es/ERIeZ2eZV7ZJpzLwcyte1ukBGEIEvtWqXBou2MUatkpPyA" type="audio/mpeg">
-    O seu browser não suporta a reprodução de áudio.
+    <source src="A.mp3" type="audio/mpeg">
+    O seu navegador não suporta o elemento de áudio.
   </audio>
 
-  <!-- Botão que aparece após 5 minutos -->
-  <br><br>
+  <!-- Botão "Finalizar Sessão" que só aparece após 5 minutos -->
   <button id="finalizar" onclick="window.location.href='https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=SHBYtXCgrUO2VCCjHpstmUUk_20om_1Phm-rNC8fTENUQjJLN0hOWTdZQVVCRVBFMFNFN0FVQlVYOC4u';">
     Finalizar Sessão
   </button>
 </body>
 </html>
+
 
